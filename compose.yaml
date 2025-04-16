@@ -1,0 +1,9 @@
+services:
+  default:
+    image: python:3.11-slim
+    volumes:
+      - ./agent_workspace:/workspace
+    working_dir: /workspace
+    ports:
+      - "8000:8000"
+    command: tail -f /dev/null
